@@ -59,9 +59,9 @@ pre code { background: transparent; padding: 0; color: inherit; }
   transition: padding 180ms ease;
 }
 .sidebar-toggle {
-  position: absolute;
-  top: 0.7rem;
-  right: 0.65rem;
+  position: sticky;
+  top: 0.5rem;
+  margin: 0 0 0.75rem auto;
   width: 28px;
   height: 28px;
   padding: 0;
