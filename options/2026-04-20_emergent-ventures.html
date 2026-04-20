@@ -25,6 +25,7 @@
       
     </aside>
     <main class="content">
+      <button class="sidebar-toggle" type="button" aria-expanded="true">Hide menu</button>
       <header class="page-header">
         <div class="breadcrumbs"><a href="../index.html">Home</a> / options / 2026-04-20_emergent-ventures</div>
         <h1>Emergent Ventures</h1>
@@ -44,5 +45,27 @@
 </article>
     </main>
   </div>
+  <script>
+  (function() {
+    const body = document.body;
+    const button = document.querySelector('.sidebar-toggle');
+    if (!button) return;
+    const key = 'maxim-site-sidebar-collapsed';
+    const sync = () => {
+      const collapsed = body.classList.contains('sidebar-collapsed');
+      button.textContent = collapsed ? 'Show menu' : 'Hide menu';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    };
+    if (localStorage.getItem(key) === '1') {
+      body.classList.add('sidebar-collapsed');
+    }
+    sync();
+    button.addEventListener('click', () => {
+      body.classList.toggle('sidebar-collapsed');
+      localStorage.setItem(key, body.classList.contains('sidebar-collapsed') ? '1' : '0');
+      sync();
+    });
+  })();
+  </script>
 </body>
 </html>
