@@ -17,10 +17,13 @@
           <li><a href="shortlist.html">Shortlist</a></li>
           <li><a href="all-options.html">Browse All</a></li>
         </ul>
-      </section>
+      </section>      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-label="Hide menu" title="Hide menu">
+        <svg class="icon-close" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4 L6 10 L12.5 16"/></svg>
+        <svg class="icon-open" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg>
+      </button>
+
     </aside>
     <main class="content">
-      <button class="sidebar-toggle" type="button" aria-expanded="true">Hide menu</button>
       <header class="hero">
         <p class="eyebrow">Explore</p>
         <h1>Real options worth exploring</h1>
@@ -164,8 +167,10 @@
     const key = 'maxim-site-sidebar-collapsed';
     const sync = () => {
       const collapsed = body.classList.contains('sidebar-collapsed');
-      button.textContent = collapsed ? 'Show menu' : 'Hide menu';
+      const label = collapsed ? 'Show menu' : 'Hide menu';
       button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
     };
     if (localStorage.getItem(key) === '1') {
       body.classList.add('sidebar-collapsed');
