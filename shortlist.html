@@ -20,6 +20,8 @@
         <h2>Explore</h2>
         <ul>
           
+          <li><a href="index.html" class="">Home</a></li>
+          
           <li><a href="shortlist.html" class="current">Shortlist</a></li>
           
           <li><a href="all-options.html" class="">Browse All</a></li>
@@ -38,7 +40,6 @@
       </header>
       
       <article class="markdown-body">
-<h1 id="shortlist-of-options">Shortlist Of Options</h1>
 <p>Start here for a broad set of real possibilities.</p>
 <p>There are several directions here that could lead to something strong.</p>
 <p>Some are practical, some are ambitious, and some are more adventurous. The point is not to force an answer immediately, but to spot what feels genuinely energising.</p>
@@ -69,7 +70,7 @@
     const body = document.body;
     const button = document.querySelector('.sidebar-toggle');
     if (!button) return;
-    const key = 'maxim-site-sidebar-collapsed';
+    const key = 'maxim-public-sidebar-collapsed';
     const sync = () => {
       const collapsed = body.classList.contains('sidebar-collapsed');
       const label = collapsed ? 'Show menu' : 'Hide menu';
