@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future VC Programme</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">Options Explorer</a>
+      <p class="sidebar-copy">Real paths worth exploring.</p>
+      
+      <section class="nav-group">
+        <h2>Explore</h2>
+        <ul>
+          
+          <li><a href="../shortlist.html" class="">Shortlist</a></li>
+          
+          <li><a href="../all-options.html" class="">Browse All</a></li>
+          
+        </ul>
+      </section>
+      
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-label="Hide menu" title="Hide menu">
+        <svg class="icon-close" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4 L6 10 L12.5 16"/></svg>
+        <svg class="icon-open" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg>
+      </button>
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / options / 2026-04-20_future-vc-programme</div>
+        <h1>Future VC Programme</h1>
+        
+        <p class="summary">Paid internships and longer fellowship-style VC development tracks with masterclasses, mentoring, and placements. UK, Europe, and US depending the programme cycle</p>
+        
+      </header>
+      
+      <article class="markdown-body">
+<h1 id="future-vc-programme">Future VC Programme</h1>
+<h2 id="at-a-glance">At A Glance</h2>
+<div class="table-wrap"><table><tbody><tr><th>What it is</th><td>Paid internships and longer fellowship-style VC development tracks with masterclasses, mentoring, and placements</td></tr><tr><th>Organisation</th><td>Future VC</td></tr><tr><th>Location</th><td>UK, Europe, and US depending the programme cycle</td></tr><tr><th>Language</th><td>English</td></tr><tr><th>Timing</th><td>The main programme pages were live when checked on 20 April 2026, but the public applications page still showed older cycle details and should be re-checked before treating timing as current</td></tr><tr><th>Cost</th><td>free; placements are described as paid</td></tr><tr><th>May appeal if</th><td>You are genuinely curious about startups, investing, and founder evaluation and want a structured route into venture capital</td></tr><tr><th>Official links</th><td><a href="https://futurevc.com/" target="_blank" rel="noreferrer">Future VC</a>, <a href="https://futurevc.com/the-future-vc-programme/" target="_blank" rel="noreferrer">The Future VC Programme</a>, <a href="https://futurevc.com/future-vc-2023-apply-now/" target="_blank" rel="noreferrer">Applications page</a></td></tr><tr><th>Last checked</th><td>20 April 2026</td></tr></tbody></table></div>
+<h2 id="why-it-may-be-interesting">Why It May Be Interesting</h2>
+<ul><li>It is a cleaner and more structured path into venture than trying to network blindly.</li><li>It could test whether you likes markets, founders, and investment thinking, not only startup image.</li><li>The program combines learning, mentoring, and real exposure rather than pure theory.</li><li>It is more international and better peer-signaling than generic business jobs.</li></ul>
+<h2 id="things-to-check">Things To Check</h2>
+<ul><li>Venture capital can become a way of orbiting action without building anything himself.</li><li>The current public timing details looked stale and need verification.</li><li>The strongest value may still come after you has built some clearer startup or project credibility.</li><li>If you are drawn mainly by status, this could become a distancing move rather than a proving move.</li></ul>
+</article>
+    </main>
+  </div>
+  <script>
+  (function() {
+    const body = document.body;
+    const button = document.querySelector('.sidebar-toggle');
+    if (!button) return;
+    const key = 'maxim-site-sidebar-collapsed';
+    const sync = () => {
+      const collapsed = body.classList.contains('sidebar-collapsed');
+      const label = collapsed ? 'Show menu' : 'Hide menu';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
+    };
+    if (localStorage.getItem(key) === '1') {
+      body.classList.add('sidebar-collapsed');
+    }
+    sync();
+    button.addEventListener('click', () => {
+      body.classList.toggle('sidebar-collapsed');
+      localStorage.setItem(key, body.classList.contains('sidebar-collapsed') ? '1' : '0');
+      sync();
+    });
+  })();
+  </script>
+</body>
+</html>
