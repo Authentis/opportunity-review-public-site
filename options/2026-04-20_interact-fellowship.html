@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interact Fellowship</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-label="Hide menu" title="Hide menu">
+        <svg class="icon-close" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4 L6 10 L12.5 16"/></svg>
+        <svg class="icon-open" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg>
+      </button>
+      <a class="brand" href="../index.html">Options Explorer</a>
+      <p class="sidebar-copy">Real paths worth exploring.</p>
+      
+      <section class="nav-group">
+        <h2>Explore</h2>
+        <ul>
+          
+          <li><a href="../shortlist.html" class="">Shortlist</a></li>
+          
+          <li><a href="../all-options.html" class="">Browse All</a></li>
+          
+        </ul>
+      </section>
+      
+    </aside>
+    <main class="content">
+      <header class="page-header">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / options / 2026-04-20_interact-fellowship</div>
+        <h1>Interact Fellowship</h1>
+        
+        <p class="summary">Fellowship and community for technologists. Global community with twice-yearly fully sponsored retreats</p>
+        
+      </header>
+      
+      <article class="markdown-body">
+<h1 id="interact-fellowship">Interact Fellowship</h1>
+<h2 id="at-a-glance">At A Glance</h2>
+<div class="table-wrap"><table><tbody><tr><th>What it is</th><td>Fellowship and community for technologists</td></tr><tr><th>Organisation</th><td>Interact</td></tr><tr><th>Location</th><td>Global community with twice-yearly fully sponsored retreats</td></tr><tr><th>Language</th><td>English</td></tr><tr><th>Timing</th><td>The current live site only offers notification for when 2026 applications open; an older official beta page referenced applications closing on 15 February and repeatedly framed the fellowship around people under 24</td></tr><tr><th>Cost</th><td>free</td></tr><tr><th>May appeal if</th><td>You may like this if you want thoughtful, ambitious peers and a serious community rather than a job or degree right away</td></tr><tr><th>Official links</th><td><a href="https://joininteract.com/" target="_blank" rel="noreferrer">Interact</a>, <a href="https://beta.joininteract.com/" target="_blank" rel="noreferrer">Interact beta fellowship page</a></td></tr><tr><th>Last checked</th><td>20 April 2026</td></tr></tbody></table></div>
+<h2 id="why-it-may-be-interesting">Why It May Be Interesting</h2>
+<ul><li>It is one of the better peer-quality and belonging-oriented additions from Claude&#x27;s pass.</li><li>It is more community- and reflection-shaped than coding- or résumé-shaped.</li><li>It offers a strong external network without requiring immediate commitment to a startup or degree.</li></ul>
+<h2 id="things-to-check">Things To Check</h2>
+<ul><li>It is not clearly open right now from the current official page.</li><li>The live page does not clearly spell out the full current eligibility rules.</li><li>The older official beta page suggests a young-technologist profile and likely under-24 positioning, but this should be treated as supporting evidence rather than the definitive live requirement set.</li><li>This is more selective fellowship/community than concrete employment path.</li></ul>
+</article>
+    </main>
+  </div>
+  <script>
+  (function() {
+    const body = document.body;
+    const button = document.querySelector('.sidebar-toggle');
+    if (!button) return;
+    const key = 'maxim-site-sidebar-collapsed';
+    const sync = () => {
+      const collapsed = body.classList.contains('sidebar-collapsed');
+      const label = collapsed ? 'Show menu' : 'Hide menu';
+      button.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
+    };
+    if (localStorage.getItem(key) === '1') {
+      body.classList.add('sidebar-collapsed');
+    }
+    sync();
+    button.addEventListener('click', () => {
+      body.classList.toggle('sidebar-collapsed');
+      localStorage.setItem(key, body.classList.contains('sidebar-collapsed') ? '1' : '0');
+      sync();
+    });
+  })();
+  </script>
+</body>
+</html>
