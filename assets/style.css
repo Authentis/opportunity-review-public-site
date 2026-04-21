@@ -6,11 +6,13 @@
   --muted: #62686e;
   --border: #d9d0c1;
   --accent: #0f4c5c;
+  --accent-hover: #13617a;
   --accent-soft: #e2eef0;
   --card: #f9f6ee;
   --shadow: 0 10px 30px rgba(22, 26, 29, 0.08);
   --mono: "SFMono-Regular", Menlo, Consolas, monospace;
-  --sans: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -20,6 +22,15 @@ body {
   background: linear-gradient(180deg, #f3efe6 0%, #f7f4ed 100%);
   color: var(--ink);
   font-family: var(--sans);
+  line-height: 1.55;
+}
+h1, h2, h3, h4, h5, h6 { font-family: var(--serif); }
+.summary,
+.hero p,
+article.markdown-body p,
+article.markdown-body li,
+article.markdown-body blockquote {
+  font-family: var(--serif);
   line-height: 1.65;
 }
 a { color: var(--accent); text-decoration: none; }
@@ -500,6 +511,164 @@ article.markdown-body p { margin: 0.9rem 0; }
 }
 .site-footer a:hover {
   text-decoration: underline;
+}
+.pill-access-realistic-now, .pill-access-easy { background: #d4ead9; color: #1f6b45; }
+.pill-access-realistic, .pill-access-needs-fast-check { background: #e4efdb; color: #3f6b24; }
+.pill-access-needs-checking, .pill-access-needs-preparation { background: #f9ead0; color: #8d5b00; }
+.pill-access-timing, .pill-access-event { background: #dde8fb; color: #234f9c; }
+.pill-access-low-chance { background: #e8e3d7; color: #6a5b37; }
+.pill-cost-free { background: #d4ead9; color: #1f6b45; }
+.pill-cost-low { background: #e4efdb; color: #4d6b23; }
+.pill-cost-medium { background: #f9ead0; color: #8d5b00; }
+.pill-cost-high { background: #f5dede; color: #9b2f2f; }
+.pill-cost-unknown { background: #ece8dc; color: #62686e; }
+.pill-theme-fintech { background: #dceaed; color: #0f4c5c; }
+.pill-theme-startup { background: #ebe3f6; color: #5a3aa0; }
+.pill-theme-academic { background: #dde8fb; color: #234f9c; }
+.pill-theme-sailing { background: #d9ecf0; color: #165a6a; }
+.pill-theme-builder { background: #dbecde; color: #1f5e3c; }
+.pill-theme-challenge { background: #f4e5d1; color: #8a4f16; }
+.pill-theme-other { background: #ece8dc; color: #62686e; }
+.dots {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(22, 26, 29, 0.14);
+  display: inline-block;
+}
+.dots-accent .dot.on { background: var(--accent); }
+.dots-peer .dot.on { background: #1f6b45; }
+.dots-intensity .dot.on { background: #b87615; }
+.dots-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.option-theme-fintech { --theme-accent: #0f4c5c; --theme-soft: #e1eff1; }
+.option-theme-startup { --theme-accent: #5a3aa0; --theme-soft: #ece4fa; }
+.option-theme-academic { --theme-accent: #234f9c; --theme-soft: #dfe8fb; }
+.option-theme-sailing { --theme-accent: #165a6a; --theme-soft: #dbecef; }
+.option-theme-builder { --theme-accent: #1f5e3c; --theme-soft: #dcecdf; }
+.option-theme-challenge { --theme-accent: #8a4f16; --theme-soft: #f4e5d1; }
+.option-theme-other { --theme-accent: #62686e; --theme-soft: #ebe6da; }
+article.markdown-body.option-theme-fintech,
+article.markdown-body.option-theme-startup,
+article.markdown-body.option-theme-academic,
+article.markdown-body.option-theme-sailing,
+article.markdown-body.option-theme-builder,
+article.markdown-body.option-theme-challenge,
+article.markdown-body.option-theme-other {
+  border-top: 3px solid var(--theme-accent, var(--accent));
+}
+.option-hero {
+  margin: 0 0 1.1rem;
+  padding: 0.9rem 1rem;
+  background: var(--theme-soft, rgba(255,255,255,0.7));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--theme-accent, var(--accent));
+  border-radius: 0.85rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.option-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.option-theme-label {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--theme-accent, var(--accent));
+}
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1rem;
+  background: var(--theme-accent, var(--accent));
+  color: #fff !important;
+  border-radius: 0.7rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(22, 26, 29, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.cta-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(22, 26, 29, 0.12);
+  text-decoration: none;
+}
+.cta-primary .cta-arrow {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.related-options {
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.1rem;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--theme-accent, var(--accent));
+  border-radius: 0.9rem;
+}
+.related-options h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+.related-item {
+  display: block;
+  padding: 0.7rem 0.85rem;
+  background: #fffdf8;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+.related-item:hover {
+  border-color: var(--theme-accent, var(--accent));
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.related-item-title {
+  display: block;
+  font-weight: 700;
+  color: var(--theme-accent, var(--accent));
+  line-height: 1.25;
+}
+.related-item-note {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #3f4b50;
+  line-height: 1.45;
+  font-family: var(--serif);
 }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
