@@ -361,6 +361,13 @@ tbody tr.recent-row {
   background: var(--accent-soft);
   color: var(--accent);
 }
+.pill[class*="pill-access-"],
+.pill[class*="pill-theme-"] {
+  padding: 0.16rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-weight: 500;
+}
 .pill-shortlist { background: #d7ece0; color: #1f6b45; }
 .pill-stretch { background: #f9ead0; color: #8d5b00; }
 .pill-watch { background: #dde8fb; color: #234f9c; }
